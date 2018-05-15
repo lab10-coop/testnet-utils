@@ -67,7 +67,3 @@ In case we want to more accurately control the load, the implementation can be c
 `count_pending_txs.sh` can be used to monitor the number of pending transactions per testnet node (can vary, depending on the network topology).  
 Example invocation:  
 `count_pending_txs.sh tm10`.
-
-## More
-
-More information can be found on [this Wiki Page](https://wiki.lab10.io/pages/viewpage.action?pageId=329172).
