@@ -1,0 +1,14 @@
+{
+  "name": "address-generator",
+  "version": "1.0.0",
+  "description": "simple JS script for generating an arbitrary number of Ethereum compatible accounts. Outputs private key, address pairs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "didi",
+  "license": "ISC",
+  "dependencies": {
+    "web3": "^1.0.0-beta.33"
+  }
+}

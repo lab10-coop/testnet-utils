@@ -1,0 +1,42 @@
+[parity]
+base_path = "node0"
+chain = "chain.json"
+identity = "testnode"
+
+[account]
+# unlock account for validation and account for ATS distribution
+unlock = ["0xf8d232e2f75cca230b48c390854ea0c1c92705c5"]
+password = ["../pass"]
+
+[ui]
+disable=true
+
+[network]
+port = 40006
+max_peers = 200
+# if not explicitly given, the enode maps to the internal IP
+nat = "extip:94.130.160.203"
+# don't attempts to connect to non-public IPs (Hetzner doesn't like that)
+allow_ips = "public"
+warp = false
+#discovery = false
+
+[rpc]
+port=40007
+# enables connecting through ssh tunnel (with remote mapping to different port)
+hosts = ["all"]
+
+[websockets]
+disable = true
+
+[dapps]
+disable=true
+
+[mining]
+engine_signer = "0xf8d232e2f75cca230b48c390854ea0c1c92705c5"
+force_sealing = true
+
+[misc]
+log_file = "node0/parity.log"
+color = true
+

@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# convenience wrapper script for querying a Parity node via RPC.
+# This is useful despite of the possibility to use geth console (attach), because via geth console only part of the API is accessible.
+#
+# Requires 'curl' and 'jq' (for json pretty printing) to be installed.
+#
+# example usage for getting the genesis block 
+# parity-rpc eth_getBlockByNumber '"0", true'
+#
+# Documentation of Parity's JSON-RPC API can be found at https://paritytech.github.io/wiki/JSONRPC
+
+set -e
+set -u
+
+method=$1
+params=$2
+if [[ ${3-} ]]; then
+  port=$3
+else
+   port=8545
+fi
+
+data='{"method":"'$method'","params":['$params'],"id":1,"jsonrpc":"2.0"}'
+curl -sS --data "$data" -H "Content-Type: application/json" -X POST localhost:$port | jq
+
