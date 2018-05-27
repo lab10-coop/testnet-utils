@@ -6,7 +6,7 @@
 # Requires 'curl' and 'jq' (for json pretty printing) to be installed.
 #
 # example usage for getting the genesis block 
-# parity-rpc eth_getBlockByNumber '"0", true'
+# parity-rpc eth_getBlockByNumber '"0x0", true'
 #
 # Documentation of Parity's JSON-RPC API can be found at https://paritytech.github.io/wiki/JSONRPC
 
