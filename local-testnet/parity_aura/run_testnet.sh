@@ -7,7 +7,7 @@ set -e
 set -u
 
 name=$1
-PARITY="parity-dev"
+PARITY="parity"
 
 die() {
 	echo "$*" 1>&2

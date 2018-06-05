@@ -7,7 +7,7 @@ set -e
 set -u
 
 name=$1
-PARITY="parity_tm"
+PARITY="parity"
 
 die() {
 	echo "$*" 1>&2
@@ -35,7 +35,7 @@ check_jobs() {
 pids=()
 for i in $(seq 0 $nr_nodes); do
 	nodedir="node$i"
-	extra_args="-l network=debug"
+	extra_args="-l engine=debug,consensus=debug,miner=debug,sync=debug,verification=debug"
 	$PARITY -c $nodedir/config.toml $extra_args &> /dev/null &
 	# push pid of spawned process to pids array
 	pids+=($!)

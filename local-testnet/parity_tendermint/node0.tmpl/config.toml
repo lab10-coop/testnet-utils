@@ -14,12 +14,6 @@ disable=true
 [network]
 port = 40006
 max_peers = 200
-# if not explicitly given, the enode maps to the internal IP
-nat = "extip:94.130.160.203"
-# don't attempts to connect to non-public IPs (Hetzner doesn't like that)
-allow_ips = "public"
-warp = false
-#discovery = false
 
 [rpc]
 port=40007

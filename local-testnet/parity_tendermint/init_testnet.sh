@@ -128,13 +128,8 @@ disable=true
 [network]
 port = $((40006+(10*$i)))
 max_peers = 200
-# if not explicitly given, the enode maps to the internal IP
-nat = "extip:94.130.160.203"
-# don't attempts to connect to non-public IPs (Hetzner doesn't like that)
-allow_ips = "public"
-warp = false
 discovery = true
-bootnodes = ["enode://7c008f34b4eb0b11fce3410967804818a56b6d05a0e66486d426c9cbc4939759bf6d066a3a61f388d62216ce7af90ca57045f72c49cbbd839ead91f29589161d@94.130.160.203:40006"]
+bootnodes = ["enode://ae3612ef228780d16a6e0a43fb9a05755972b5b6f23f8a95973a83330ffa5671c85361505ea866f920961e98a5395fab8a58be95d04ab82a68293ccc9f77ab1f@127.0.0.1:40006"]
 
 [rpc]
 port=$((40007+(10*$i)))
